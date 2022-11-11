@@ -13,7 +13,7 @@
   <!-- AXIOS -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js' integrity='sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==' crossorigin='anonymous'></script>
 
-  <title>Random email</title>
+  <title>Random Email GEN</title>
 </head>
 <body>
 
@@ -21,12 +21,14 @@
 
     <div class="container">
       <h1>RANDOM MAIL GENERATOR</h1>
-      <h3>Ecco le tue email, so 50€:</h3>
+      <button @click="getEmails()">get email</button>
+      <button @click="deleteEmails()">delete email</button>
+      <h3 v-show="isLoaded">Ecco le tue email, so 50€:</h3>
 
       <ul>
         <li v-if="isLoaded" v-for="email in emails" >{{email}}</li>
 
-        <div v-else class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div v-show="isLoaded == false" class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </ul>
 
       

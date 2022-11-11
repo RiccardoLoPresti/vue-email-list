@@ -9,7 +9,7 @@ body{
   background-color: rgb(23, 23, 23);
 }
 
-h1, h3{
+h1, h3, button{
   margin-bottom: 20px;
 }
 
@@ -19,9 +19,13 @@ li{
   list-style:square;
 }
 
+button{
+  padding:5px 10px;
+  margin-right: 10px;
+}
+
 .container{
   margin: 50px auto;
-  text-align: center;
   width: 80%;
   min-height: 300px;
   background-color: rgb(132, 192, 87);
@@ -32,12 +36,14 @@ li{
 
 .lds-default {
   top: 40%;
-  left:50%;
+  left:20%;
   transform: translateX(-50%);
   position: absolute;
+  z-index: 999;
   width: 80px;
   height: 80px;
 }
+
 .lds-default div {
   position: absolute;
   width: 6px;

@@ -3,15 +3,16 @@ const {createApp} = Vue;
 createApp({
   data(){
     return{
-      isLoaded: false,
+      isLoaded: null,
       emails:[],
       nEmails: 10,
       apiUrl: 'https://flynn.boolean.careers/exercises/api/random/mail'
     }
   },
   methods:{
-    getApi(){
+    getEmails(){
       this.isLoaded = false;
+      this.emails=[];
       for (let i = 0; i < this.nEmails; i++) {
         axios.get(this.apiUrl)
         .then(result => {
@@ -19,9 +20,10 @@ createApp({
       })
       }
       this.isLoaded= true;
+    },
+    deleteEmails(){
+      this.emails=[];
+      this.isLoaded = null;
     }
   },
-  mounted(){
-    this.getApi();
-  }
 }).mount('#app')
