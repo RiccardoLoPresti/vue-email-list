@@ -18,13 +18,22 @@
 <body>
 
   <div id="app">
+
     <div class="container">
       <h1>RANDOM MAIL GENERATOR</h1>
       <h3>Ecco le tue email, so 50€:</h3>
+
       <ul>
-        <li v-for="email in emails">{{email}}</li>
+        <li v-if="isLoaded" v-for="email in emails" >{{email}}</li>
+
+        <div v-else class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </ul>
+
+      
+
     </div>
+
+    
     
   </div>
   
