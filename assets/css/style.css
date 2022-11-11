@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(23, 23, 23);
+}
+
+h1, h3{
+  margin-bottom: 20px;
+}
+
+li{
+  text-align: left;
+  margin-left: 20px;
+  list-style:square;
+}
+
+.container{
+  margin: 50px auto;
+  text-align: center;
+  width: 80%;
+  background-color: rgb(132, 192, 87);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+  padding:50px;
+}
+
